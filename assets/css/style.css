@@ -2,7 +2,7 @@
 /*
 Theme Name: Landing Page Kenzie Academy
 Theme URI: https://kenzie.com.br/
-Author: Kenzie Academy 
+Author: Kenzie Academy
 Author URI: https://kenzie.com.br/
 Description: Descrção do thema.
 Version: 1.0
@@ -29,21 +29,38 @@ family=Lato -> Títulos, textos
 /* FONTS */
 
 /* VARIÁVEIS */
-:root{}
-  
+:root{
+    --main-font: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    --background-body: #141414;
+}
+
 /* GERAL */
-html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
+html, a, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
     list-style: none;
+    text-decoration: none;
+    font-family: var(--main-font);
 }
-img{
-    max-width: 800px;
+
+.container h2 {
+    color: #e5e5e5;
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 3px;
 }
+
+body{
+    background-color: var(--background-body);
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 div.flex{
     display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
 }
 div.full-container{
     width: 100%;
@@ -59,45 +76,328 @@ div.container{
     width: 100%;
     max-width: 1140px;
     margin:0 auto;
+    padding: 1px 30px;
 }
-/* GERAL */
-  
-/* HTML */
-html{}
-/* HTML */
-  
-/* BODY */
-body{}
-/* BODY */
-  
-/* HEADER */
-header{}
-/* HEADER */
-  
-/* FOOTER */
-footer{}
-/* FOOTER */
 
-/* INICIAL */
-main{}
-/* INICIAL */
+a.logo figure img {
+    max-width: 70px;
+    width: 70px;
+}
 
-/* EXTRAS */
+.mobile-element {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    padding-right: 60px;
+}
 
-/* para estilizar a scrollbar */
-::-webkit-scrollbar{}
-::-webkit-scrollbar-button{}
-::-webkit-scrollbar-track{}
-::-webkit-scrollbar-track-piece{}
-::-webkit-scrollbar-thumb{}
-::-webkit-scrollbar-corner{}
-::-webkit-resizer{}
+.mobile-element::after {
+    content: '';
+    display: inline-block;
+    margin-left: 8px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+}
 
-/* EXTRAS */
-  
+.hidden-menu {
+    display: none;
+}
 
+.secao-destaque {
+ min-height: 40vw; 
+}
+
+.hidden {
+    display: none;
+}
+
+div.menu-usuario .pesquisar {
+    display: none;
+}
+
+div.menu-usuario .usuario img {
+    width: 28px;
+    border-radius: 6px;
+}
+
+.pagina-inicial::before {
+    content: '';
+    width: 100vw; 
+    background-image: url('../img/movies/ted.webp');
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 61vw;
+    top: 0;
+}
+
+.secao-destaque-conteudo img {
+    max-width: 160px;
+    padding: 8px;
+    width: 125px;
+}
+
+.secao-destaque-buttons button {
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 4px 10px;
+    font-family: var(--main-font);
+}
+
+button.assistir {
+    background-color: #ffffff;
+    width: 100px;
+}
+
+.assistir {
+    color: #000000;
+}
+
+.assistir::before {
+    content: '';
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 12px solid black;
+    margin-right: 7px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+button.mais-informacoes {
+    background-color: rgba(109,109,110,0.7);
+    width: 145px;
+}
+
+.mais-informacoes {
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+.mais-informacoes::before {
+    content: " i ";
+    border: 1px solid white;
+    border-radius: 100%;
+    margin-right: 5px;
+    padding-left: 4px;
+}
+
+.secao-destaque-conteudo p {
+    color:  #ffffff;
+    font-family: var(--main-font);
+    font-size: 12px;
+    width: 60%;
+    padding-bottom: 10px;
+}
+
+article.secao-destaque-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40vw;
+}
+
+ul.flex {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul.flex li{
+    max-width:50%;
+}
+
+ul.flex li.flex-column a figure img {
+    width:98%;
+    border-radius: 4px;
+}
+
+#secao-originais-desktop {
+    display: none;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+footer div.container div.flex div.flex-column nav ul li a{
+    color:gray;
+
+}
+
+footer div.container div.flex div.flex-column nav ul {
+    display:flex;
+    width:100%;
+    flex-wrap: wrap;
+}
+
+footer div.container div.flex div.flex-column nav ul li {
+    width:50%;
+    padding-bottom: 10px;
+}
+
+footer div.container div.flex{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.redes-sociais li a i {
+    color: gray;
+    width: 20px;
+}
+
+.redes-sociais li {
+    display:inline-block;
+    margin-top: 7px;;
+}
+
+.copyright {
+    font-size: 11px;
+    color: gray;
+    padding: 10px 0;
+}
+
+ 
 /* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
-  
-    @media screen and (min-width: 800px) {}
-/* MEDIA QUERIES */
+
+@media screen and (min-width: 700px) {
+a.logo figure img {
+    max-width: 92px;
+    width: 92px;
+}
+header {
+    background: linear-gradient(to bottom, rgba(0,0,0,.7) 10%, rgba(0,0,0,0));
+}
+.mobile-element {
+    display: none;
+}
+.mobile-element::after {
+    display: none;
+}
+header div.container div.flex div.flex-column nav {
+    position: absolute;
+    left: 250px;
+}
+header .hidden-menu {
+    display: inline;
+    font-size: 14px;
+    font-family: var(--main-font);
+}
+ul.hidden-menu li a:hover {
+    color: #b3b3b3;
+}
+ul.hidden-menu li.item-ativo a:active{
+    color: #ffffff;
+}
+ul.hidden-menu {
+    display: flex;
+}
+ul.hidden-menu li {
+    margin-left:10px;
+}
+ul.hidden-menu li a {
+    color:  #e5e5e5;
+}
+div.menu-usuario .usuario img{
+    width: 32px;
+    cursor: pointer;
+}
+.container {    
+    max-width: 1735px;
+    padding: 0px 60px;
+}
+button.mais-informacoes:hover {
+    background: rgba(109,109,110,0.4);
+}
+button.assistir:hover {
+    background: rgba(255,255,255,0.75);
+}
+#secao-originais-mobile {
+    display: none;
+}
+#secao-originais-desktop {
+    display: flex;  
+}
+button.mais-informacoes  {
+    width: 250px;
+    font-size: 22px;
+    padding: 6px;
+    cursor: pointer;
+}
+button.assistir  {
+    width: 150px;
+    font-size: 22px;
+    padding: 6px;
+    cursor: pointer;
+}
+.secao-destaque-conteudo img{
+    max-width:650px;
+    width: 300px;
+}
+.secao-destaque-conteudo p {
+    color: #ffffff;
+    font-size: 26px;
+    text-shadow: 2px 4px rgb(0 0 0 / 45%);
+}
+section ul.flex{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ 
+}
+.container h2 {
+    font-size: 26px;
+}
+#secao-continuar-assistindo .container{
+    background: linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20,.15) 15%,rgba(20,20,20,.35) 29%,rgba(20,20,20,.58) 44%,#141414 68%,#141414 100%);
+}
+ul.flex li.flex-column a figure img {
+    max-width: 287px;
+    min-width:107px;
+}
+.secao-destaque {
+    min-height: 20vw; 
+   }
+ul.flex li{
+    max-width:16.66%;
+}
+ul.flex li.flex-column a figure img {
+    max-width:287px;
+    border-radius: 4px;
+}
+.pagina-inicial::before {
+    width: 100vw; 
+    min-height: 50vw;
+}
+footer div.container div.flex div.footer-final {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer div.container div.flex div.flex-column nav ul {
+    display:flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+footer div.container div.flex div.flex-column nav ul li {
+    width: 100%;
+}
+footer div.container div.flex {
+    padding-bottom: 20px;
+}
+footer {
+    width:500px;
+    border-top: 1px solid rgb(128 128 128 / 26%);
+    margin:60px auto 10px;
+}
+}
+
+@media screen and (min-width: 1400px) {
+ul.hidden-menu {
+    margin-left: 20px;
+}
+}
